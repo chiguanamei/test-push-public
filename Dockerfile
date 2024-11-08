@@ -5,7 +5,7 @@ ENV GO111MODULE=on \
     GOOS=linux
 
 WORKDIR /build
-ADD go.mod go.sum ./
+ADD go.mod ./
 RUN go mod download
 COPY . .
 RUN go build -ldflags  -o one-api
