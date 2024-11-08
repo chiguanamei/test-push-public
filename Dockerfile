@@ -8,7 +8,7 @@ WORKDIR /build
 ADD go.mod ./
 RUN go mod download
 COPY . .
-RUN go build -ldflags  -o one-api
+RUN go build -o one-api
 
 FROM alpine
 
